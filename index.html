@@ -1,0 +1,105 @@
+<!--Sunny Lee Bloc React First Assignment
+    o	Put your code in an index.html and create a GitHub repository to share it.
+o	Make an App component which will render the full resumé.
+o	Use semantic HTML throughout the page, so, a header, main, section and address.
+o	Include the contact information section with the name, email address, phone number, and a picture. Feel free to choose one or use this image of Ilana from Broad City as a stand-in for Sally.
+o	Include a section for Sally's education.
+o	There should be a section for Sally's employment history with at least 2 entries, each with the company name, job title, dates of employment and a short description.
+o	As a stretch, write some responsive, mobile-first CSS styles for this application to keep practicing those CSS skills. We don't want to go rusty with CSS.
+o	A second stretch would be to use a prop to control the student's name that's being rendered.
+-->
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Sunny Lee's Sally Student Resume Assignment with Accessibility for Bloc 2019">
+    <meta name="viewport" content="width=device-width">
+    <title>Sally Student Resume React Version</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="application-root"></div>
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js"> </script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+
+
+
+
+        function App(props) {
+            return (
+                <div>
+                    <h1>{props.name}</h1>
+                    <main>
+                        <section>
+                            <address>
+                                <img src="https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg" alt="Photo of Sally Student"/>
+                                <p>987 Bloc Boulevard, New York City, NY 00001 </p>
+                                <p>Cell: <a href="tel:+11234567890">(123) 456-7890</a></p>
+                                <p>Email: <a href="mailto:sally.student@coolsally.com">sally.student@coolsally.com</a></p>
+                            </address> 
+                        </section>
+
+                        <section className='tab'>
+                            <header>
+                                <h2>Education</h2>
+                            </header>
+                            <h3>Second University</h3>
+                            <p><i> Masters in Software Engineering</i></p>
+                            <p>2010 - 2014</p>
+                            <h3>First College</h3>
+                            <p><i> Bachelors in Computer Science </i> </p>
+                            <p>2006 - 2010</p>
+                        </section> 
+
+                        <section className='tab'>
+                            <header>
+                                <h2>Employment History</h2>
+                            </header>
+                            <section>
+                                <h3>Googolplex Tech Company</h3>
+                                <p><i>Software Developer</i></p>
+                                <p>2019 - 2025</p>
+                                <ul>
+                                    <li>Wrote lorem ipsum filler for  sites.</li>
+                                    <li>Developed programs for Student's schedules.</li>
+                                    <li>Maintained applications for Cloud.</li>
+                                </ul>
+                                <h3>Million Tech Company</h3>
+                                <p><i>Web Developer</i></p>
+                                <p>2014 - 2019</p>
+                                <ul>
+                                    <li>Lorem ipsum expert.</li>
+                                    <li>Created millions of websites.</li>
+                                    <li>Designed stuff.</li>
+                                </ul>
+                                <h3>Thousand Tech Company</h3>
+                                <p><i>Junior Developer</i></p>
+                                <p>2012 - 2014</p>
+                                <ul>
+                                    <li>Lorem ipsum training.</li>
+                                    <li>Presented lorem ipsum fillers.</li>
+                                    <li>Anything and everything.</li>
+                                </ul>
+                            </section>
+                        </section>
+                    </main>
+                    <footer>
+                        <p>This site is meant for educational purposes only. Any resemblance to real persons, living or dead, or places is purely coincidental.</p>
+                    </footer>
+                </div>
+            )
+        }    
+        
+    ReactDOM.render(
+        <App name="Sally Student"/>,
+        document.querySelector('#application-root')
+    );     
+    </script> 
+</body>
+</html>

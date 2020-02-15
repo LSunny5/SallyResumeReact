@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+p{
+    font-weight: bolder;
+    font-size: 100%;
+}
+ 
+.tab{text-indent: 50px;}
+  
+img {
+    width: 25%;
+}
+
+header{
+    font-size: 150%;
+}
+  
+h2 {
+    font-size: 125%;
+}
+  
